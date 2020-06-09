@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  php:
+    image: snaksa/camera-cctv
+    build:
+      context: .
+    container_name: camera-cctv-backend
+    volumes:
+      - /media/sinan/7906c0f3-bf41-4dc0-a72a-9bd5669a14f1/home/recording:/var/www/html/public/images
+    ports:
+      - "8085:80"
